@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:meals_app/categories_screen.dart';
+import './categories_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,6 +20,20 @@ class MyApp extends StatelessWidget {
           secondaryVariant: const Color(0xffb8c480),
           surface: const Color(0xff501537),
         ),
+        canvasColor: const Color(0xff503854),
+        fontFamily: 'Raleway',
+        textTheme: ThemeData.light().textTheme.copyWith(
+            bodyText1: const TextStyle(
+              color: Color(0xff211f21),
+            ),
+            bodyText2: const TextStyle(
+              color: Color(0xff211f21),
+            ),
+            headline6: const TextStyle(
+              fontSize: 20,
+              fontWeight: FontWeight.bold,
+              fontFamily: 'RobotoCondensed',
+            )),
       ),
       home: CategoriesScreen(),
     );
