@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meals_app/category_meals_screen.dart';
 import './categories_screen.dart';
 
 void main() => runApp(MyApp());
@@ -16,8 +17,8 @@ class MyApp extends StatelessWidget {
           primary: const Color(0xff922D50),
           secondary: const Color(0xFFD4E79E),
           background: const Color(0xff501537),
-          primaryVariant: const Color(0xff3c1b43),
-          secondaryVariant: const Color(0xffb8c480),
+          primaryContainer: const Color(0xff3c1b43),
+          secondaryContainer: const Color(0xffb8c480),
           surface: const Color(0xff501537),
         ),
         canvasColor: const Color(0xff503854),
@@ -36,25 +37,9 @@ class MyApp extends StatelessWidget {
             )),
       ),
       home: CategoriesScreen(),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Delhi Eats'),
-      ),
-      body: const Center(
-        child: Text('Navigation Time'),
-      ),
+      routes: {
+        '/category-meals': ((context) => CategoryMealsScreen()),
+      },
     );
   }
 }
